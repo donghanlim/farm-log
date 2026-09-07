@@ -1,0 +1,1 @@
+{"name":"farm-log","version":"0.2.0","private":true,"type":"module","engines":{"node":">=22"},"scripts":{"start":"node src/app-server.mjs","dev":"node scripts/dev-app.mjs","start:lab":"node src/server.mjs","setup:ocr":"node scripts/setup-ocr.mjs","setup:speech":"node scripts/setup-browser-speech.mjs","test":"node --test","eval":"node eval/run.mjs"}}

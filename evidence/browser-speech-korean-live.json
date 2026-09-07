@@ -1,0 +1,112 @@
+{
+  "verifiedAt": "2026-09-07T06:36:03.410Z",
+  "viable": true,
+  "actualSpokenKoreanRecognition": true,
+  "model": "onnx-community/whisper-tiny",
+  "revision": "ff4177021cc41f7db950912b73ea4fdf7d01d8e7",
+  "transformersVersion": "3.8.1",
+  "dtype": "q8",
+  "device": "wasm",
+  "language": "korean",
+  "task": "transcribe",
+  "source": {
+    "rowApi": "https://datasets-server.huggingface.co/rows?dataset=google%2Ffleurs&config=ko_kr&split=test&offset=0&length=1",
+    "dataset": "google/fleurs",
+    "revision": "70bb2e84b976b7e960aa89f1c648e09c59f894dd",
+    "split": "test",
+    "config": "ko_kr",
+    "row": 0,
+    "id": 1883,
+    "filename": "10015989594226850325.wav",
+    "sourceUrl": "https://datasets-server.huggingface.co/cached-assets/google/fleurs/--/70bb2e84b976b7e960aa89f1c648e09c59f894dd/--/ko_kr/test/0/audio/audio.wav",
+    "license": "CC-BY-4.0",
+    "licenseSource": "https://huggingface.co/datasets/google/fleurs/resolve/70bb2e84b976b7e960aa89f1c648e09c59f894dd/README.md",
+    "attribution": "Google FLEURS dataset",
+    "reference": "다리 밑 수직 간격은 15미터이며, 공사는 2011년 8월에 마무리되었으며, 해당 다리의 통행금지는 2017년 3월까지이다.",
+    "normalizedReference": "다리 밑 수직 간격은 15미터이며 공사는 2011년 8월에 마무리되었으며 해당 다리의 통행금지는 2017년 3월까지이다",
+    "durationSeconds": 12.48,
+    "bytes": 798778,
+    "sha256": "e6bc095e55046de927d7c937f036f96ebb506570648ad9ae7c6576febfc4746a",
+    "exactObservedDownloadUrlRecord": "/Users/justimmacbook/.aside/u/0/sessions/2026-09-07_y3Pe3rFpqhAaVTc7/tmp/browser-speech-korean/source-row.json -> rows[0].row.audio[0].src",
+    "licenseStatement": "Official Google FLEURS card declares cc-by-4.0 and states: All datasets are licensed under the Creative Commons license (CC-BY).",
+    "audioScratchPath": "/Users/justimmacbook/.aside/u/0/sessions/2026-09-07_y3Pe3rFpqhAaVTc7/tmp/browser-speech-korean/fleurs-ko-test-0.wav",
+    "audioCommittedToGit": false
+  },
+  "expectedReference": "다리 밑 수직 간격은 15미터이며, 공사는 2011년 8월에 마무리되었으며, 해당 다리의 통행금지는 2017년 3월까지이다.",
+  "actualTranscription": "다리미 수직 강격은 15m입니다. 공사는 2021년 8월에 마무리되었으며 해당 다리의 통행금지는 2017년 3월까지",
+  "engine": "whisper-tiny-q8-wasm-local",
+  "latency": {
+    "endToEndMs": 16474,
+    "inferenceMs": 9906
+  },
+  "evaluation": {
+    "raw": {
+      "edits": 13,
+      "referenceCharacters": 69,
+      "cer": 0.18840579710144928
+    },
+    "normalized": {
+      "edits": 9,
+      "referenceCharacters": 53,
+      "cer": 0.16981132075471697
+    },
+    "normalization": "NFC; remove Unicode whitespace and punctuation; Korean syllable codepoints; no numeral/unit or semantic normalization",
+    "normalizedReference": "다리밑수직간격은15미터이며공사는2011년8월에마무리되었으며해당다리의통행금지는2017년3월까지이다",
+    "normalizedHypothesis": "다리미수직강격은15m입니다공사는2021년8월에마무리되었으며해당다리의통행금지는2017년3월까지",
+    "observedErrors": [
+      "다리 밑 → 다리미",
+      "간격 → 강격",
+      "2011년 → 2021년",
+      "final 이다 omitted",
+      "15미터이며 → 15m입니다 (unit formatting plus wording change)"
+    ],
+    "farmingAccuracyVerified": false,
+    "sampleCount": 1
+  },
+  "inputEnergy": {
+    "status": "audio-checked",
+    "peak": 0.1318937987089157,
+    "rms": 0.01532054787711624,
+    "speechDetected": null,
+    "elapsedMs": 185
+  },
+  "network": {
+    "resources": [
+      "http://127.0.0.1:8887/speech-assets/vendor/transformers.js",
+      "http://127.0.0.1:8887/speech-assets/models/onnx-community/whisper-tiny/tokenizer.json",
+      "http://127.0.0.1:8887/speech-assets/models/onnx-community/whisper-tiny/tokenizer_config.json",
+      "http://127.0.0.1:8887/speech-assets/models/onnx-community/whisper-tiny/config.json",
+      "http://127.0.0.1:8887/speech-assets/models/onnx-community/whisper-tiny/preprocessor_config.json",
+      "http://127.0.0.1:8887/speech-assets/models/onnx-community/whisper-tiny/onnx/encoder_model_quantized.onnx",
+      "http://127.0.0.1:8887/speech-assets/models/onnx-community/whisper-tiny/onnx/decoder_model_merged_quantized.onnx",
+      "http://127.0.0.1:8887/speech-assets/models/onnx-community/whisper-tiny/generation_config.json",
+      "http://127.0.0.1:8887/speech-assets/models/onnx-community/whisper-tiny/tokenizer.json",
+      "http://127.0.0.1:8887/speech-assets/models/onnx-community/whisper-tiny/tokenizer_config.json",
+      "http://127.0.0.1:8887/speech-assets/models/onnx-community/whisper-tiny/preprocessor_config.json",
+      "http://127.0.0.1:8887/speech-assets/wasm/ort-wasm-simd-threaded.jsep.mjs",
+      "http://127.0.0.1:8887/speech-assets/wasm/ort-wasm-simd-threaded.jsep.wasm"
+    ],
+    "externalRuntimeResourceCount": 0,
+    "privateInputUsed": false,
+    "microphoneUsed": false
+  },
+  "silenceGuard": {
+    "allZeroPCMRejected": true,
+    "unitTests": 5,
+    "unitTestsPassed": 5,
+    "voiceActivityDetector": false,
+    "notes": "Only zero-energy and non-finite PCM are rejected. Tones and noisy non-speech are not classified."
+  },
+  "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36",
+  "isolatedProbe": {
+    "port": 8887,
+    "serverStopped": true,
+    "port8886": "Previous probe PID 97438 remains listening. kill denied Operation not permitted; earlier report that it stopped was incorrect. It was not used for the Korean result."
+  },
+  "limitations": [
+    "One public read-speech sample is not a general Korean or agricultural speech benchmark.",
+    "Important date and word errors occurred; transcript requires explicit user review.",
+    "Numbers/units may change formatting.",
+    "Fully network-disconnected PWA cache/mobile/Safari still unverified."
+  ]
+}

@@ -1,0 +1,462 @@
+{
+  "startedAt": "2026-09-07T04:52:33.870Z",
+  "completedAt": "2026-09-07T04:53:15.687Z",
+  "scope": "비민감 합성 문장 5건. 실제 농가 검증/안전성/모델 일반 정확도 주장 아님.",
+  "endpoints": {
+    "tags": "http://localhost:11434/api/tags",
+    "show": "http://localhost:11434/api/show",
+    "generate": "http://localhost:11434/api/generate"
+  },
+  "model": "qwen3:4b",
+  "installedModels": [
+    {
+      "name": "gpt-oss:20b-cloud",
+      "remote": true
+    },
+    {
+      "name": "qwen3.5:397b-cloud",
+      "remote": true
+    },
+    {
+      "name": "deepseek-v4-flash:0731-cloud",
+      "remote": true
+    },
+    {
+      "name": "nemotron-3-super:cloud",
+      "remote": true
+    },
+    {
+      "name": "gemma4:31b-cloud",
+      "remote": true
+    },
+    {
+      "name": "nemotron-3-nano:30b-cloud",
+      "remote": true
+    },
+    {
+      "name": "nemotron-3-ultra:cloud",
+      "remote": true
+    },
+    {
+      "name": "kimi-k2.7-code:cloud",
+      "remote": true
+    },
+    {
+      "name": "glm-5.3:cloud",
+      "remote": true
+    },
+    {
+      "name": "gpt-oss:120b-cloud",
+      "remote": true
+    },
+    {
+      "name": "kimi-k2.6:cloud",
+      "remote": true
+    },
+    {
+      "name": "minimax-m3:cloud",
+      "remote": true
+    },
+    {
+      "name": "deepseek-v4-pro:0813-cloud",
+      "remote": true
+    },
+    {
+      "name": "glm-5.3-flash:cloud",
+      "remote": true
+    },
+    {
+      "name": "kimi-k3:cloud",
+      "remote": true
+    },
+    {
+      "name": "qwen3:8b",
+      "remote": false
+    },
+    {
+      "name": "exaone3.5:7.8b",
+      "remote": false
+    },
+    {
+      "name": "qwen3:4b",
+      "remote": false
+    },
+    {
+      "name": "exaone3.5:2.4b",
+      "remote": false
+    }
+  ],
+  "localVerification": {
+    "capabilities": {
+      "available": true,
+      "model": "qwen3:4b",
+      "detail": "설치된 로컬 GGUF 모델 확인. 외부 전송 없이 localhost에서 처리합니다."
+    },
+    "format": "gguf",
+    "remote_host": null,
+    "remote_model": null
+  },
+  "selectedWorkedAt": "2026-09-07",
+  "profile": {
+    "parcels": [
+      {
+        "id": "house-3",
+        "name": "3번 하우스",
+        "aliases": [
+          "삼번 하우스"
+        ],
+        "crop": "토마토"
+      },
+      {
+        "id": "upper",
+        "name": "윗밭",
+        "aliases": [],
+        "crop": "고추"
+      }
+    ]
+  },
+  "summary": {
+    "cases": 5,
+    "passed": 4,
+    "checks": 31,
+    "passedChecks": 30,
+    "localAI": 5
+  },
+  "results": [
+    {
+      "id": "natural-multiple",
+      "text": "어제 3번 하우스에서 물 주고 풀도 뽑았어. 한 30분 걸렸네.",
+      "previousDraft": null,
+      "latency_ms": 8886,
+      "draft": {
+        "worked_at": "2026-09-06",
+        "parcel_id": "house-3",
+        "crop": "토마토",
+        "work_type": "관수·제초",
+        "weather": null,
+        "area_m2": null,
+        "worker_count": null,
+        "duration_minutes": 30,
+        "inputs": [],
+        "harvest_amount": null,
+        "harvest_unit": null,
+        "details": "어제 3번 하우스에서 물 주고 풀도 뽑았어. 한 30분 걸렸네."
+      },
+      "engine": "ollama:qwen3:4b",
+      "warnings": [],
+      "checks": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-06",
+          "actual": "2026-09-06",
+          "pass": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "house-3",
+          "actual": "house-3",
+          "pass": true
+        },
+        {
+          "field": "crop",
+          "expected": "토마토",
+          "actual": "토마토",
+          "pass": true
+        },
+        {
+          "field": "work_type",
+          "expected": "관수·제초",
+          "actual": "관수·제초",
+          "pass": true
+        },
+        {
+          "field": "duration_minutes",
+          "expected": 30,
+          "actual": 30,
+          "pass": true
+        },
+        {
+          "field": "harvest_amount",
+          "expected": null,
+          "actual": null,
+          "pass": true
+        },
+        {
+          "field": "actual-local-ai",
+          "pass": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "purchase-not-use",
+      "text": "윗밭용 복합비료 2포 사왔어. 아직 밭에는 안 뿌렸어.",
+      "previousDraft": null,
+      "latency_ms": 8281,
+      "draft": {
+        "worked_at": "2026-09-07",
+        "parcel_id": "upper",
+        "crop": "고추",
+        "work_type": "자재구매",
+        "weather": null,
+        "area_m2": null,
+        "worker_count": null,
+        "duration_minutes": null,
+        "inputs": [
+          {
+            "action": "purchase",
+            "kind": "fertilizer",
+            "name": "윗밭용 복합비료",
+            "quantity": 2,
+            "unit": "포",
+            "dilution": null
+          }
+        ],
+        "harvest_amount": null,
+        "harvest_unit": null,
+        "details": "윗밭용 복합비료 2포 사왔어. 아직 밭에는 안 뿌렸어."
+      },
+      "engine": "ollama:qwen3:4b",
+      "warnings": [],
+      "checks": [
+        {
+          "field": "parcel_id",
+          "expected": "upper",
+          "actual": "upper",
+          "pass": true
+        },
+        {
+          "field": "work_type",
+          "expected": "자재구매",
+          "actual": "자재구매",
+          "pass": true
+        },
+        {
+          "field": "harvest_amount",
+          "expected": null,
+          "actual": null,
+          "pass": true
+        },
+        {
+          "field": "inputs",
+          "expected": {
+            "action": "purchase",
+            "name": "복합비료",
+            "quantity": 2,
+            "unit": "포"
+          },
+          "actual": [
+            {
+              "action": "purchase",
+              "kind": "fertilizer",
+              "name": "윗밭용 복합비료",
+              "quantity": 2,
+              "unit": "포",
+              "dilution": null
+            }
+          ],
+          "pass": false
+        },
+        {
+          "field": "no-use",
+          "pass": true
+        },
+        {
+          "field": "actual-local-ai",
+          "pass": true
+        }
+      ],
+      "passed": false
+    },
+    {
+      "id": "water-vs-harvest",
+      "text": "오늘 3번 하우스 토마토에 물 80리터 줬고 관수는 25분 했어. 수확은 안 했어.",
+      "previousDraft": null,
+      "latency_ms": 9416,
+      "draft": {
+        "worked_at": "2026-09-07",
+        "parcel_id": "house-3",
+        "crop": "토마토",
+        "work_type": "관수",
+        "weather": "80",
+        "area_m2": null,
+        "worker_count": null,
+        "duration_minutes": 25,
+        "inputs": [],
+        "harvest_amount": null,
+        "harvest_unit": null,
+        "details": "오늘 3번 하우스 토마토에 물 80리터 줬고 관수는 25분 했어. 수확은 안 했어."
+      },
+      "engine": "ollama:qwen3:4b",
+      "warnings": [],
+      "checks": [
+        {
+          "field": "parcel_id",
+          "expected": "house-3",
+          "actual": "house-3",
+          "pass": true
+        },
+        {
+          "field": "duration_minutes",
+          "expected": 25,
+          "actual": 25,
+          "pass": true
+        },
+        {
+          "field": "harvest_amount",
+          "expected": null,
+          "actual": null,
+          "pass": true
+        },
+        {
+          "field": "harvest_unit",
+          "expected": null,
+          "actual": null,
+          "pass": true
+        },
+        {
+          "field": "work_type",
+          "expected": "관수",
+          "actual": "관수",
+          "pass": true
+        },
+        {
+          "field": "actual-local-ai",
+          "pass": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "harvest-correction",
+      "text": "아니, 수확량은 12kg이 아니라 18kg으로 정정할게요.",
+      "previousDraft": {
+        "worked_at": "2026-09-05",
+        "parcel_id": "upper",
+        "crop": "고추",
+        "work_type": "수확",
+        "weather": null,
+        "area_m2": null,
+        "worker_count": 2,
+        "duration_minutes": null,
+        "inputs": [],
+        "harvest_amount": 12,
+        "harvest_unit": "kg",
+        "details": ""
+      },
+      "latency_ms": 5067,
+      "draft": {
+        "worked_at": "2026-09-05",
+        "parcel_id": "upper",
+        "crop": "고추",
+        "work_type": "수확",
+        "weather": null,
+        "area_m2": null,
+        "worker_count": 2,
+        "duration_minutes": null,
+        "inputs": [],
+        "harvest_amount": 18,
+        "harvest_unit": "kg",
+        "details": "아니, 수확량은 12kg이 아니라 18kg으로 정정할게요."
+      },
+      "engine": "ollama:qwen3:4b",
+      "warnings": [],
+      "checks": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-05",
+          "actual": "2026-09-05",
+          "pass": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "upper",
+          "actual": "upper",
+          "pass": true
+        },
+        {
+          "field": "crop",
+          "expected": "고추",
+          "actual": "고추",
+          "pass": true
+        },
+        {
+          "field": "harvest_amount",
+          "expected": 18,
+          "actual": 18,
+          "pass": true
+        },
+        {
+          "field": "harvest_unit",
+          "expected": "kg",
+          "actual": "kg",
+          "pass": true
+        },
+        {
+          "field": "worker_count",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "field": "actual-local-ai",
+          "pass": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "ocr-not-usage",
+      "text": "사진만 첨부했어요. 실제로 사용했는지는 아직 말하지 않았어요.\n[OCR 참고] 샘플농약 500ml 1000배 희석, 방제",
+      "previousDraft": null,
+      "latency_ms": 10123,
+      "draft": {
+        "worked_at": "2026-09-07",
+        "parcel_id": null,
+        "crop": null,
+        "work_type": null,
+        "weather": null,
+        "area_m2": null,
+        "worker_count": null,
+        "duration_minutes": null,
+        "inputs": [],
+        "harvest_amount": null,
+        "harvest_unit": null,
+        "details": "사진만 첨부했어요. 실제로 사용했는지는 아직 말하지 않았어요.\n[OCR 참고] 샘플농약 500ml 1000배 희석, 방제"
+      },
+      "engine": "ollama:qwen3:4b",
+      "warnings": [],
+      "checks": [
+        {
+          "field": "work_type",
+          "expected": null,
+          "actual": null,
+          "pass": true
+        },
+        {
+          "field": "worker_count",
+          "expected": null,
+          "actual": null,
+          "pass": true
+        },
+        {
+          "field": "harvest_amount",
+          "expected": null,
+          "actual": null,
+          "pass": true
+        },
+        {
+          "field": "inputs",
+          "expected": [],
+          "actual": [],
+          "pass": true
+        },
+        {
+          "field": "actual-local-ai",
+          "pass": true
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

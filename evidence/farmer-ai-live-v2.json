@@ -1,0 +1,337 @@
+{
+  "startedAt": "2026-09-07T04:59:36.955Z",
+  "completedAt": "2026-09-07T05:00:08.918Z",
+  "scope": "비민감 합성 대화 3건·4회 실제 추론. 기존 farmer-ai-live.json의 4/5 실측 원본은 보존. 작목 무발언 시 null로 기준 수정. 일반 정확도 또는 농약 안전성 검증 아님.",
+  "endpoints": {
+    "tags": "http://localhost:11434/api/tags",
+    "show": "http://localhost:11434/api/show",
+    "generate": "http://localhost:11434/api/generate"
+  },
+  "model": "qwen3:4b",
+  "capabilities": {
+    "available": true,
+    "model": "qwen3:4b",
+    "detail": "설치된 로컬 GGUF 모델 확인. 외부 전송 없이 localhost에서 처리합니다."
+  },
+  "selectedWorkedAt": "2026-09-07",
+  "profile": {
+    "parcels": [
+      {
+        "id": "house-3",
+        "name": "3번 하우스",
+        "aliases": [
+          "삼번 하우스"
+        ],
+        "crop": "토마토"
+      },
+      {
+        "id": "upper",
+        "name": "윗밭",
+        "aliases": [],
+        "crop": "고추"
+      }
+    ]
+  },
+  "summary": {
+    "cases": 3,
+    "passed": 3,
+    "inferences": 4,
+    "localAI": 4,
+    "checks": 23,
+    "passedChecks": 23
+  },
+  "results": [
+    {
+      "id": "implicit-crop-must-ask",
+      "turns": [
+        {
+          "text": "오늘 윗밭 물줬어",
+          "submittedHistory": "오늘 윗밭 물줬어",
+          "previousDraft": {
+            "worked_at": "2026-09-07",
+            "parcel_id": null,
+            "crop": null,
+            "work_type": null,
+            "weather": null,
+            "area_m2": null,
+            "worker_count": null,
+            "duration_minutes": null,
+            "inputs": [],
+            "harvest_amount": null,
+            "harvest_unit": null,
+            "details": ""
+          },
+          "latency_ms": 11342,
+          "draft": {
+            "worked_at": "2026-09-07",
+            "parcel_id": "upper",
+            "crop": null,
+            "work_type": "관수",
+            "weather": null,
+            "area_m2": null,
+            "worker_count": null,
+            "duration_minutes": null,
+            "inputs": [],
+            "harvest_amount": null,
+            "harvest_unit": null,
+            "details": "오늘 윗밭 물줬어"
+          },
+          "engine": "ollama:qwen3:4b",
+          "warnings": [],
+          "checks": [
+            {
+              "field": "parcel_id",
+              "expected": "upper",
+              "actual": "upper",
+              "pass": true
+            },
+            {
+              "field": "crop",
+              "expected": null,
+              "actual": null,
+              "pass": true
+            },
+            {
+              "field": "work_type",
+              "expected": "관수",
+              "actual": "관수",
+              "pass": true
+            },
+            {
+              "field": "actual-local-ai",
+              "pass": true
+            },
+            {
+              "field": "one-copy-details",
+              "pass": true
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "natural-pruning",
+      "turns": [
+        {
+          "text": "오늘 윗밭 고추 순 쳤어",
+          "submittedHistory": "오늘 윗밭 고추 순 쳤어",
+          "previousDraft": {
+            "worked_at": "2026-09-07",
+            "parcel_id": null,
+            "crop": null,
+            "work_type": null,
+            "weather": null,
+            "area_m2": null,
+            "worker_count": null,
+            "duration_minutes": null,
+            "inputs": [],
+            "harvest_amount": null,
+            "harvest_unit": null,
+            "details": ""
+          },
+          "latency_ms": 7870,
+          "draft": {
+            "worked_at": "2026-09-07",
+            "parcel_id": "upper",
+            "crop": "고추",
+            "work_type": "적심",
+            "weather": null,
+            "area_m2": null,
+            "worker_count": null,
+            "duration_minutes": null,
+            "inputs": [],
+            "harvest_amount": null,
+            "harvest_unit": null,
+            "details": "오늘 윗밭 고추 순 쳤어"
+          },
+          "engine": "ollama:qwen3:4b",
+          "warnings": [],
+          "checks": [
+            {
+              "field": "parcel_id",
+              "expected": "upper",
+              "actual": "upper",
+              "pass": true
+            },
+            {
+              "field": "crop",
+              "expected": "고추",
+              "actual": "고추",
+              "pass": true
+            },
+            {
+              "field": "work_type",
+              "expected": "적심",
+              "actual": "적심",
+              "pass": true
+            },
+            {
+              "field": "actual-local-ai",
+              "pass": true
+            },
+            {
+              "field": "one-copy-details",
+              "pass": true
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "passed": true
+    },
+    {
+      "id": "add-then-correct",
+      "turns": [
+        {
+          "text": "수확도5kg",
+          "submittedHistory": "오늘 윗밭 고추 관수 30분 했어. 2명이 했어.\n수확도5kg",
+          "previousDraft": {
+            "worked_at": "2026-09-07",
+            "parcel_id": "upper",
+            "crop": "고추",
+            "work_type": "관수",
+            "weather": null,
+            "area_m2": null,
+            "worker_count": 2,
+            "duration_minutes": 30,
+            "inputs": [],
+            "harvest_amount": null,
+            "harvest_unit": null,
+            "details": "오늘 윗밭 고추 관수 30분 했어. 2명이 했어."
+          },
+          "latency_ms": 6257,
+          "draft": {
+            "worked_at": "2026-09-07",
+            "parcel_id": "upper",
+            "crop": "고추",
+            "work_type": "관수·수확",
+            "weather": null,
+            "area_m2": null,
+            "worker_count": 2,
+            "duration_minutes": 30,
+            "inputs": [],
+            "harvest_amount": 5,
+            "harvest_unit": "kg",
+            "details": "오늘 윗밭 고추 관수 30분 했어. 2명이 했어.\n수확도5kg"
+          },
+          "engine": "ollama:qwen3:4b",
+          "warnings": [],
+          "checks": [
+            {
+              "field": "work_type",
+              "expected": "관수·수확",
+              "actual": "관수·수확",
+              "pass": true
+            },
+            {
+              "field": "harvest_amount",
+              "expected": 5,
+              "actual": 5,
+              "pass": true
+            },
+            {
+              "field": "harvest_unit",
+              "expected": "kg",
+              "actual": "kg",
+              "pass": true
+            },
+            {
+              "field": "duration_minutes",
+              "expected": 30,
+              "actual": 30,
+              "pass": true
+            },
+            {
+              "field": "worker_count",
+              "expected": 2,
+              "actual": 2,
+              "pass": true
+            },
+            {
+              "field": "actual-local-ai",
+              "pass": true
+            },
+            {
+              "field": "one-copy-details",
+              "pass": true
+            }
+          ],
+          "passed": true
+        },
+        {
+          "text": "아니30분말고20분",
+          "submittedHistory": "오늘 윗밭 고추 관수 30분 했어. 2명이 했어.\n수확도5kg\n아니30분말고20분",
+          "previousDraft": {
+            "worked_at": "2026-09-07",
+            "parcel_id": "upper",
+            "crop": "고추",
+            "work_type": "관수·수확",
+            "weather": null,
+            "area_m2": null,
+            "worker_count": 2,
+            "duration_minutes": 30,
+            "inputs": [],
+            "harvest_amount": 5,
+            "harvest_unit": "kg",
+            "details": "오늘 윗밭 고추 관수 30분 했어. 2명이 했어.\n수확도5kg"
+          },
+          "latency_ms": 6454,
+          "draft": {
+            "worked_at": "2026-09-07",
+            "parcel_id": "upper",
+            "crop": "고추",
+            "work_type": "관수·수확",
+            "weather": null,
+            "area_m2": null,
+            "worker_count": 2,
+            "duration_minutes": 20,
+            "inputs": [],
+            "harvest_amount": 5,
+            "harvest_unit": "kg",
+            "details": "오늘 윗밭 고추 관수 30분 했어. 2명이 했어.\n수확도5kg\n아니30분말고20분"
+          },
+          "engine": "ollama:qwen3:4b",
+          "warnings": [],
+          "checks": [
+            {
+              "field": "work_type",
+              "expected": "관수·수확",
+              "actual": "관수·수확",
+              "pass": true
+            },
+            {
+              "field": "duration_minutes",
+              "expected": 20,
+              "actual": 20,
+              "pass": true
+            },
+            {
+              "field": "harvest_amount",
+              "expected": 5,
+              "actual": 5,
+              "pass": true
+            },
+            {
+              "field": "worker_count",
+              "expected": 2,
+              "actual": 2,
+              "pass": true
+            },
+            {
+              "field": "actual-local-ai",
+              "pass": true
+            },
+            {
+              "field": "one-copy-details",
+              "pass": true
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

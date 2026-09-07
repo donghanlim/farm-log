@@ -1,0 +1,47 @@
+{
+  "testedAt": "2026-09-07T06:55:42.343Z",
+  "origin": "http://127.0.0.1:8880",
+  "inputBoundary": "synthetic farmer text and public MAFRA image only; public FLEURS speech UI transcription tested without microphone",
+  "browserObserved": [
+    "local speech file → editable Korean transcript",
+    "public photo → OCR reference and missing-work question",
+    "free conversation → date/time correction and work addition → reviewed save"
+  ],
+  "saved": {
+    "id": "8082638b-c687-403e-a92c-764e2ecae4f4",
+    "worked_at": "2026-09-07",
+    "parcel_name": "윗밭",
+    "crop": "고추",
+    "work_type": "수확·관수",
+    "duration_minutes": 20,
+    "harvest_amount": 5,
+    "reviewed": true
+  },
+  "ocr": {
+    "session": "900ee928-cbfb-4edf-8ca1-d8aa4783b183",
+    "processing": "ready",
+    "characters": 1307,
+    "ready": false,
+    "work_type": null,
+    "inputs": 0
+  },
+  "export": {
+    "entries": 1,
+    "htmlCharacters": 1231,
+    "csvCharacters": 357,
+    "actualPrinterDialogTested": false
+  },
+  "checks": {
+    "llmAvailable": true,
+    "ocrAvailable": true,
+    "browserWasmRoute": true,
+    "downloadArchiveBlocked": true
+  },
+  "sources": {
+    "src/app-server.mjs": "96f4579ad226f4ecd273ae0982f67365342638e9190d145e5f1084ab588fffe7",
+    "src/app/ai.mjs": "07bebb36a0e9afe025535f5988a857a7cf421d39b6a26d5ee499495d6f6b16c5",
+    "src/app/media.mjs": "7b79e0cba801744f9f121fc66a7dfa6b1b3efcb614bc05811f187cc56f59b0a6",
+    "src/farmer/app.js": "27d718a834288f326b7b8dab626c7b67374721657ba58822910a898f9bb4e7cc",
+    "src/farmer/speech-local.js": "58745e0a5ebf83f51f1ad098054d8588d1f8bb749f45a6d69739f9f7dfe4921e"
+  }
+}

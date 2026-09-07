@@ -13,3 +13,7 @@ run.log
 .codex/
 .aside/
 .orca/
+
+# Local prototype runtime and media (never commit user data)
+.local-data/
+.venv-media/

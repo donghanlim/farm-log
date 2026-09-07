@@ -1,0 +1,2495 @@
+{
+  "generated_at": "2026-09-07T03:22:24.787Z",
+  "mode": "synthetic-only",
+  "engine": "deterministic-baseline",
+  "scope": "고정 합성 텍스트 30종의 규칙 기반 추출 회귀 평가. 실제 API/LLM/STT 호출 없음.",
+  "limitations": [
+    "합성 fixture를 바탕으로 개발한 in-sample 회귀 검사이며 holdout 또는 실제 농가 일반화 성능이 아님",
+    "음성·사진·LLM 정확도, 실사용 KPI, 농약 등록·PLS·PHI·유기인증 안전성 미검증",
+    "안전 점수는 데이터 처리 규칙 검사이며 농작업 안전 인증이 아님"
+  ],
+  "cases": 30,
+  "unique_fixtures": 30,
+  "accuracy": {
+    "passed": 30,
+    "total": 30,
+    "field_passed": 210,
+    "field_total": 210,
+    "rate": 1
+  },
+  "safety": {
+    "passed": 210,
+    "total": 210,
+    "rate": 1
+  },
+  "results": [
+    {
+      "id": "normal",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-07",
+          "actual": "2026-09-07",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p1",
+          "actual": "p1",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "상추",
+          "actual": "상추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "관수",
+          "actual": "관수",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": 20,
+          "actual": 20,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": "L",
+          "actual": "L",
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [],
+          "actual": [],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 1.192
+    },
+    {
+      "id": "missing",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "상추",
+          "actual": "상추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "관수",
+          "actual": "관수",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [
+            "worked_at",
+            "parcel_id"
+          ],
+          "actual": [
+            "worked_at",
+            "parcel_id"
+          ],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.115
+    },
+    {
+      "id": "multiple",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-07",
+          "actual": "2026-09-07",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p1",
+          "actual": "p1",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "상추",
+          "actual": "상추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [
+            "work_type"
+          ],
+          "actual": [
+            "work_type"
+          ],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.054
+    },
+    {
+      "id": "ambiguous",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [
+            "worked_at",
+            "parcel_id",
+            "crop",
+            "work_type"
+          ],
+          "actual": [
+            "worked_at",
+            "parcel_id",
+            "crop",
+            "work_type"
+          ],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.084
+    },
+    {
+      "id": "spray",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-07",
+          "actual": "2026-09-07",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p2",
+          "actual": "p2",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "고추",
+          "actual": "고추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "방제",
+          "actual": "방제",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": 2,
+          "actual": 2,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": "L",
+          "actual": "L",
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [],
+          "actual": [],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.042
+    },
+    {
+      "id": "harvest",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-08",
+          "actual": "2026-09-08",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p1",
+          "actual": "p1",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "토마토",
+          "actual": "토마토",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "수확",
+          "actual": "수확",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": 12.5,
+          "actual": 12.5,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": "kg",
+          "actual": "kg",
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [],
+          "actual": [],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.031
+    },
+    {
+      "id": "year-end",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-12-31",
+          "actual": "2026-12-31",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p2",
+          "actual": "p2",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "고추",
+          "actual": "고추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "수확",
+          "actual": "수확",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": 8,
+          "actual": 8,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": "kg",
+          "actual": "kg",
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [],
+          "actual": [],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.028
+    },
+    {
+      "id": "leap-day",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2024-02-29",
+          "actual": "2024-02-29",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p1",
+          "actual": "p1",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "상추",
+          "actual": "상추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "파종",
+          "actual": "파종",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": 30,
+          "actual": 30,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": "개",
+          "actual": "개",
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [],
+          "actual": [],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.027
+    },
+    {
+      "id": "invalid-date",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p1",
+          "actual": "p1",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "상추",
+          "actual": "상추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "관수",
+          "actual": "관수",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": 10,
+          "actual": 10,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": "L",
+          "actual": "L",
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [
+            "worked_at"
+          ],
+          "actual": [
+            "worked_at"
+          ],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.032
+    },
+    {
+      "id": "no-unit",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-07",
+          "actual": "2026-09-07",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p1",
+          "actual": "p1",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "상추",
+          "actual": "상추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "수확",
+          "actual": "수확",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [],
+          "actual": [],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.043
+    },
+    {
+      "id": "multi-parcel",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-07",
+          "actual": "2026-09-07",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "상추",
+          "actual": "상추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "관수",
+          "actual": "관수",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [
+            "parcel_id"
+          ],
+          "actual": [
+            "parcel_id"
+          ],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.03
+    },
+    {
+      "id": "multi-crop",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-07",
+          "actual": "2026-09-07",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p1",
+          "actual": "p1",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "수확",
+          "actual": "수확",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [
+            "crop"
+          ],
+          "actual": [
+            "crop"
+          ],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.032
+    },
+    {
+      "id": "transplant",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-09",
+          "actual": "2026-09-09",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p2",
+          "actual": "p2",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "토마토",
+          "actual": "토마토",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "정식",
+          "actual": "정식",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": 100,
+          "actual": 100,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": "포기",
+          "actual": "포기",
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [],
+          "actual": [],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.025
+    },
+    {
+      "id": "seed-grams",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-10",
+          "actual": "2026-09-10",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p1",
+          "actual": "p1",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "상추",
+          "actual": "상추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "파종",
+          "actual": "파종",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": 50,
+          "actual": 50,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": "g",
+          "actual": "g",
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [],
+          "actual": [],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.019
+    },
+    {
+      "id": "next-year",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2027-01-01",
+          "actual": "2027-01-01",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p2",
+          "actual": "p2",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "고추",
+          "actual": "고추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "관수",
+          "actual": "관수",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": 3,
+          "actual": 3,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": "L",
+          "actual": "L",
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [],
+          "actual": [],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.018
+    },
+    {
+      "id": "century-leap",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2000-02-29",
+          "actual": "2000-02-29",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p1",
+          "actual": "p1",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "상추",
+          "actual": "상추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "수확",
+          "actual": "수확",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": "kg",
+          "actual": "kg",
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [],
+          "actual": [],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.017
+    },
+    {
+      "id": "century-invalid",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p1",
+          "actual": "p1",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "상추",
+          "actual": "상추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "수확",
+          "actual": "수확",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": 1,
+          "actual": 1,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": "kg",
+          "actual": "kg",
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [
+            "worked_at"
+          ],
+          "actual": [
+            "worked_at"
+          ],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.016
+    },
+    {
+      "id": "no-date",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p1",
+          "actual": "p1",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "상추",
+          "actual": "상추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "관수",
+          "actual": "관수",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": 5,
+          "actual": 5,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": "L",
+          "actual": "L",
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [
+            "worked_at"
+          ],
+          "actual": [
+            "worked_at"
+          ],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.015
+    },
+    {
+      "id": "no-parcel",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-07",
+          "actual": "2026-09-07",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "고추",
+          "actual": "고추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "수확",
+          "actual": "수확",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": 2,
+          "actual": 2,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": "kg",
+          "actual": "kg",
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [
+            "parcel_id"
+          ],
+          "actual": [
+            "parcel_id"
+          ],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.018
+    },
+    {
+      "id": "no-crop",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-07",
+          "actual": "2026-09-07",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p1",
+          "actual": "p1",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "관수",
+          "actual": "관수",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": 5,
+          "actual": 5,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": "L",
+          "actual": "L",
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [
+            "crop"
+          ],
+          "actual": [
+            "crop"
+          ],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.392
+    },
+    {
+      "id": "no-work",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-07",
+          "actual": "2026-09-07",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p2",
+          "actual": "p2",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "토마토",
+          "actual": "토마토",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [
+            "work_type"
+          ],
+          "actual": [
+            "work_type"
+          ],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.047
+    },
+    {
+      "id": "unsupported-unit",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-07",
+          "actual": "2026-09-07",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p1",
+          "actual": "p1",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "상추",
+          "actual": "상추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "관수",
+          "actual": "관수",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [],
+          "actual": [],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.02
+    },
+    {
+      "id": "unsupported-crop",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-07",
+          "actual": "2026-09-07",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p1",
+          "actual": "p1",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "수확",
+          "actual": "수확",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": 4,
+          "actual": 4,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": "kg",
+          "actual": "kg",
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [
+            "crop"
+          ],
+          "actual": [
+            "crop"
+          ],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.021
+    },
+    {
+      "id": "unsupported-work",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-07",
+          "actual": "2026-09-07",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p2",
+          "actual": "p2",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "고추",
+          "actual": "고추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [
+            "work_type"
+          ],
+          "actual": [
+            "work_type"
+          ],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.025
+    },
+    {
+      "id": "unsupported-parcel",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-07",
+          "actual": "2026-09-07",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "상추",
+          "actual": "상추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "수확",
+          "actual": "수확",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": 2,
+          "actual": 2,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": "kg",
+          "actual": "kg",
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [
+            "parcel_id"
+          ],
+          "actual": [
+            "parcel_id"
+          ],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.019
+    },
+    {
+      "id": "two-dates",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p1",
+          "actual": "p1",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "상추",
+          "actual": "상추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "관수",
+          "actual": "관수",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": 5,
+          "actual": 5,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": "L",
+          "actual": "L",
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [
+            "worked_at"
+          ],
+          "actual": [
+            "worked_at"
+          ],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.017
+    },
+    {
+      "id": "two-quantities",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-07",
+          "actual": "2026-09-07",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p1",
+          "actual": "p1",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "상추",
+          "actual": "상추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "관수",
+          "actual": "관수",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [],
+          "actual": [],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.045
+    },
+    {
+      "id": "negative-quantity",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-07",
+          "actual": "2026-09-07",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p1",
+          "actual": "p1",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "상추",
+          "actual": "상추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "수확",
+          "actual": "수확",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [],
+          "actual": [],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.031
+    },
+    {
+      "id": "zero-quantity",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-07",
+          "actual": "2026-09-07",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p1",
+          "actual": "p1",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "상추",
+          "actual": "상추",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "수확",
+          "actual": "수확",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": null,
+          "actual": null,
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [],
+          "actual": [],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.02
+    },
+    {
+      "id": "decimal-water",
+      "accuracy_passed": true,
+      "safety_passed": true,
+      "comparisons": [
+        {
+          "field": "worked_at",
+          "expected": "2026-09-07",
+          "actual": "2026-09-07",
+          "passed": true
+        },
+        {
+          "field": "parcel_id",
+          "expected": "p2",
+          "actual": "p2",
+          "passed": true
+        },
+        {
+          "field": "crop",
+          "expected": "토마토",
+          "actual": "토마토",
+          "passed": true
+        },
+        {
+          "field": "work_type",
+          "expected": "관수",
+          "actual": "관수",
+          "passed": true
+        },
+        {
+          "field": "amount",
+          "expected": 0.5,
+          "actual": 0.5,
+          "passed": true
+        },
+        {
+          "field": "unit",
+          "expected": "L",
+          "actual": "L",
+          "passed": true
+        },
+        {
+          "field": "missing",
+          "expected": [],
+          "actual": [],
+          "passed": true
+        }
+      ],
+      "safety": [
+        {
+          "check": "regulations_never_marked_verified",
+          "passed": true
+        },
+        {
+          "check": "synthetic_source_and_original_fixture",
+          "passed": true
+        },
+        {
+          "check": "human_gate_in_trace",
+          "passed": true
+        },
+        {
+          "check": "required_nulls_recomputed",
+          "passed": true
+        },
+        {
+          "check": "null_values_not_fabricated",
+          "passed": true
+        },
+        {
+          "check": "privacy_fields_absent",
+          "passed": true
+        },
+        {
+          "check": "allowlist_validation",
+          "passed": true
+        }
+      ],
+      "duration_ms": 0.019
+    }
+  ]
+}

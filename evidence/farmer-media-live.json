@@ -1,0 +1,96 @@
+{
+  "testedAt": "2026-09-07T06:18:54.835Z",
+  "platform": "macOS 26 / arm64",
+  "compiler": "/Library/Developer/CommandLineTools/usr/bin/swiftc",
+  "compilerVersion": "Apple Swift 6.3.3",
+  "sdk": "/Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk",
+  "capabilities": {
+    "ocr": {
+      "available": false,
+      "detail": "로컬 Vision OCR helper 미설치 또는 macOS 실행 차단. 원본 사진은 보관해요."
+    },
+    "stt": {
+      "available": false,
+      "detail": "로컬 Whisper CLI·모델 미설치 또는 실행 불가. 원본 음성은 보관해요."
+    }
+  },
+  "ocr": {
+    "source": "Public MAFRA 2021 farming diary example page 1, no private user data",
+    "sourceUrl": "https://www.mafra.go.kr/bbs/gong/447/327120/artclView.do",
+    "compileSucceeded": true,
+    "codeSignatureVerified": true,
+    "runtime": "SIGKILL (exit 137); helper unavailable. No security settings changed.",
+    "result": {
+      "mime": "image/png",
+      "processing": "unavailable",
+      "detail": "로컬 Vision OCR helper 미설치 또는 macOS 실행 차단. 원본 사진은 보관해요.",
+      "ocrText": null,
+      "transcript": null,
+      "bytes": 305420,
+      "originalPreserved": true,
+      "sha256": "150ff7ccd0aea36f975252d868e5135d497d267074a4f05561c990cdae16754c"
+    }
+  },
+  "stt": {
+    "syntheticVoice": "Attempted macOS say Yuna and Eddy (ko_KR), file only. Both produced header-only files with no usable audio frames.",
+    "reference": "오늘 삼번 하우스에서 토마토에 물을 삼십 분 주었습니다.",
+    "model": "/Users/justimmacbook/.cache/huggingface/hub/models--mlx-community--whisper-large-v3-turbo/snapshots/a4aaeec0636e6fef84abdcbe3544cb2bf7e9f6fb",
+    "modelDownloaded": false,
+    "dependenciesDownloaded": "mlx-whisper 0.4.3 and public dependencies, project-isolated uv venv",
+    "runtime": "Blocked: macOS library load disallowed by system policy for mlx / numpy, subsequent numpy native extension missing. No policy bypass.",
+    "wordErrorRate": null,
+    "characterErrorRate": null,
+    "measurementStatus": "unavailable: no speech frames generated; CLI also blocked before inference",
+    "result": {
+      "mime": "audio/wav",
+      "processing": "unavailable",
+      "detail": "로컬 Whisper CLI·모델 미설치 또는 실행 불가. 원본 음성은 보관해요.",
+      "ocrText": null,
+      "transcript": null,
+      "bytes": 78,
+      "originalPreserved": true,
+      "sha256": "8f277367ea6b54fdc50ac7b3bfaacbf3cba57f586b6fdbd717f137b3e93e71aa",
+      "note": "78-byte normalized WAV is header-only; preservation test only, NOT real STT accuracy evidence."
+    },
+    "audioGenerationSucceeded": false
+  },
+  "executables": {
+    "ocr": "/Users/justimmacbook/Documents/_work/farm-log/.local-data/farmer-app-tools/vision-ocr",
+    "stt": "/Users/justimmacbook/Documents/_work/farm-log/.local-data/farmer-app-tools/venv/bin/mlx_whisper",
+    "ffmpeg": "/opt/homebrew/bin/ffmpeg",
+    "uv": "/Users/justimmacbook/.local/bin/uv"
+  },
+  "setup": [
+    "bash scripts/setup-media.sh",
+    "bash scripts/setup-media.sh --install-stt",
+    "bash scripts/setup-media.sh --test-stt"
+  ],
+  "tests": {
+    "file": "test/farmer-media.test.mjs",
+    "passed": 7,
+    "failed": 0,
+    "liveRecognitionPassed": false,
+    "note": "Validation and truthful unavailable/original preservation tests passed. Not an OCR/STT accuracy pass."
+  },
+  "limits": {
+    "photoBytes": 8388608,
+    "audioBytes": 16777216,
+    "ocrTimeoutMs": 45000,
+    "sttTimeoutMs": 180000,
+    "ffmpegTimeoutMs": 30000,
+    "maxAudioSeconds": 300
+  },
+  "privacy": {
+    "networkMediaUpload": false,
+    "browserSpeech": false,
+    "microphoneAccess": false,
+    "exifSentToModel": false,
+    "filesDeleted": false
+  },
+  "unverified": [
+    "Real OCR output due to local helper execution block",
+    "Real STT output and accuracy due to native library execution block",
+    "Actual farmer/private data and handwriting accuracy",
+    "Synthetic Korean speech generation: say returned no usable speech frames"
+  ]
+}

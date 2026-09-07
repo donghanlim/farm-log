@@ -1,0 +1,120 @@
+{
+  "version": 2,
+  "testedAt": "2026-09-07T06:29:46.668Z",
+  "supersedesForOCR": "farmer-media-live.json",
+  "originalFailureEvidencePreserved": true,
+  "capabilities": {
+    "ocr": {
+      "available": true,
+      "detail": "Tesseract.js WASM 한국어·영어 OCR · 기기 내 처리 · runtime 다운로드 없음"
+    },
+    "stt": {
+      "available": false,
+      "detail": "로컬 Whisper 실행이 차단되어 음성 인식을 사용할 수 없어요. 원본 음성은 보관해요."
+    }
+  },
+  "engine": {
+    "installedAt": "2026-09-07T06:29:42.909Z",
+    "engine": "tesseract.js",
+    "version": "7.0.0",
+    "coreVersion": "7.0.0",
+    "coreSource": "https://registry.npmjs.org/tesseract.js-core/-/tesseract.js-core-7.0.0.tgz",
+    "coreIntegrity": "sha512-WnNH518NzmbSq9zgTPeoF8c+xmilS8rFIl1YKbk/ptuuc7p6cLNELNuPAzcmsYw450ca6bLa8j3t0VAtq435Vw==",
+    "engineSource": "https://registry.npmjs.org/tesseract.js/-/tesseract.js-7.0.0.tgz",
+    "engineIntegrity": "sha512-exPBkd+z+wM1BuMkx/Bjv43OeLBxhL5kKWsz/9JY+DXcXdiBjiAch0V49QR3oAJqCaL5qURE0vx9Eo+G5YE7mA==",
+    "models": [
+      {
+        "language": "kor",
+        "version": "1.0.0",
+        "source": "https://registry.npmjs.org/@tesseract.js-data/kor/-/kor-1.0.0.tgz",
+        "packageIntegrity": "sha512-tepYhsYiRJ8E44R27MHxVteEDDLfYQxuvM6u4JlEHcCYqwpefvI5TGzoMgB67kunOvtyEJYtT5zfJ/6R6FVU9w==",
+        "member": "node_modules/@tesseract.js-data/kor/4.0.0_best_int/kor.traineddata.gz",
+        "bytes": 1572336,
+        "sha256": "78c21276ab14c9bb734d83be1055d9fe5469a4e7e977c51ad385be5737e61126"
+      },
+      {
+        "language": "eng",
+        "version": "1.0.0",
+        "source": "https://registry.npmjs.org/@tesseract.js-data/eng/-/eng-1.0.0.tgz",
+        "packageIntegrity": "sha512-mbTumm6KQPUHyzTPQaF3ObXYnx0SqqfV2nabqFVQBwD6Kl7PhGSLSzOlfFTWy0P3BjghaSKA2W9GB19Jk+ZcTg==",
+        "member": "node_modules/@tesseract.js-data/eng/4.0.0_best_int/eng.traineddata.gz",
+        "bytes": 2952873,
+        "sha256": "45b4cb346724ac1774f1c36f42f182b887bcdb28ebe63e6fff90ac41f3fcff91"
+      }
+    ],
+    "runtimeNetwork": false,
+    "nativeExecutables": false,
+    "npmLifecycleScripts": false
+  },
+  "input": {
+    "source": "Public MAFRA 2021 farming diary example page 1, no private user data",
+    "sourceUrl": "https://www.mafra.go.kr/bbs/gong/447/327120/artclView.do",
+    "bytes": 305420,
+    "sha256": "150ff7ccd0aea36f975252d868e5135d497d267074a4f05561c990cdae16754c"
+  },
+  "result": {
+    "mime": "image/png",
+    "processing": "ready",
+    "ocrText": "[o] |\n영농일지 작성 메시\n필지 | YS 수행한 1개 필지 또는 여러개 필지를 모두 기재\n=        (0) 1번 농지(512번지) 또는 1번(512번지)~ 108 농지(537번지)\na= [ew\n노야                 i              i      ol2f                  :              :      Olaf\n==     조르   :    om TY       조르    {    om TY\n| 해    제품명 asp BF MBB (단위*포대)\n구입    살충제 ㅣ         . 1리터*2병 ㅣ 유기질 ㅣ         :1060×10포대\n0 RE RR\n농약\n노야                 {              {                            |              |\n=       조르    {     om | 사용량       ==    !     omy | 사용량\nia        종류     :    HEY @ Efor 9      종류     :    HEY (단위×포대)\n사용 ㅣ 살충제 ：.              ㅣ 1리터        유기질 、」              . 10<0×10포대\n※ (예) 사전 준비, 경운, 파종, 정식, 작물관리, 수확 등 기재\n작업단계            세부작업 내용에 농약, 비료, 잡초제거, 수확 등 작업내용\n(작업명)            (살포량, 면적, 희석배수, 이용 농기계, 인력투입 등) 구체적으로\n기재하세요\nㅎ (사전 준비) 가지지기, 농자재 구매, 토양개량제 살포 등 사전 작업 기재\nㅎ (경운 등) 밭갈기, 돌골라내기, 받고랑만들기, 토양살충제, 비료 살포\n* (파종) OO 종자를 OE 정도, 농지면적 OOha 정도 파종 등\n (정식) 00 묘종 <>주를 구입, OMIE| 간격으로 OOha 정식 등\n세부 | © (작물 관리) 물대기, 멀칭, 김매기, 병충해 방제, 열매슈기, 생육상황 등\n작업        ※ (물대기) 스프링클러로 몇 분 정도 물주기 등\n내용        ※ (김매기) 인력 ㅇㅇ명 투입하여 0 oha 잡초 제거 또는 ㅇㅇㅇ제초제 ㅇㅇ리터를\n물 ㅇㅇ리터에 타서 0ohall 살포\n※ (병충해 방제) ㅇㅇㅇ농약 ㅇㅇ리터에 물 ㅇㅇ리터 타서 광역방제기 이용 ㅇ아에 살포\n※ (열매수기 등) 가지별로 중심과 1개만 남기고 모두 £7] 등 기재(인력 oF 투입)\nㅎ (수확) 벼 몇 가마 수확, 건조 작업, 출하 등 작업내용 기재(농기계, 인력 등)\n(또는 사과(홍옥) 수확, 도매시장 등에 출하 등 기재)\n※ [| 필수 작성 항목, [_」 선택 작성 항목",
+    "transcript": null,
+    "detail": "로컬 WASM OCR 원문이에요. 오인식 가능성이 있어요. 작업 사실로 자동 확정하지 않아요.",
+    "originalPreserved": true,
+    "durationMs": 3710,
+    "modelConfidence": 83,
+    "confidenceIsAccuracy": false
+  },
+  "checks": {
+    "recognizedAnchors": [
+      {
+        "text": "영농일지",
+        "found": true
+      },
+      {
+        "text": "작업단계",
+        "found": true
+      },
+      {
+        "text": "농약",
+        "found": true
+      },
+      {
+        "text": "수확",
+        "found": true
+      }
+    ],
+    "missingLocalModel": "fails ENOENT, no downloads",
+    "runtimeHTTPAttempt": "actively denied OCR_RUNTIME_NETWORK_DISABLED",
+    "nativeOCRRetried": false,
+    "sttRetried": false,
+    "sttEnabled": false
+  },
+  "tests": {
+    "file": "test/farmer-media.test.mjs",
+    "passed": 9,
+    "failed": 0,
+    "skipped": 0,
+    "liveOCRPassed": true
+  },
+  "runtime": {
+    "node": "/Users/justimmacbook/.aside/runtime/node/bin/node",
+    "ocrModule": "src/app/media.mjs",
+    "entry": "--ocr-wasm <absolute local file>",
+    "setup": "node scripts/setup-ocr.mjs",
+    "dataDirectory": ".local-data/farmer-app-tools/ocr",
+    "languages": "kor+eng",
+    "gzip": true,
+    "cacheMethod": "none",
+    "worker": "offline-worker.cjs",
+    "ocrTimeoutMs": 60000,
+    "capabilityTimeoutMs": 30000,
+    "network": false,
+    "nativeExecutables": false,
+    "modelAutoDownload": false
+  },
+  "limitations": [
+    "One public printed-form PNG only, no accuracy benchmark or handwriting validation",
+    "Table layout and some Korean characters are misrecognized; OCR text is raw evidence, never automatic confirmation of farm work",
+    "JPEG, WebP and HEIC paths not live-tested; unsupported decode preserves original and reports failure",
+    "STT remains unavailable, investigated separately"
+  ]
+}
