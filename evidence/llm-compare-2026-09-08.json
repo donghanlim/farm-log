@@ -2,9 +2,25 @@
   "experiment": "farm-log extraction LLM pilot: Spark vs Opus 5 High",
   "date": "2026-09-08 KST",
   "dataset": "eval/cases.jsonl 30 fixtures (synthetic) + blind 10 (engine-scored)",
-  "result_30": {"spark_case": "30/30", "spark_field": "210/210", "opus_case": "27/30", "opus_field": "204/210"},
-  "result_blind_10": {"spark_case": "10/10 (authorship bias noted)", "opus_case": "8/10 (fully blind)"},
+  "result_30": {
+    "spark_case": "30/30",
+    "spark_field": "210/210",
+    "opus_case": "27/30",
+    "opus_field": "204/210"
+  },
+  "result_blind_10": {
+    "spark_case": "10/10 (authorship bias noted)",
+    "opus_case": "8/10 (fully blind)"
+  },
   "key_finding": "Opus fails ambiguity isolation (keeps quantities, hallucinates work_type, spills nulls); null-conservatism rule confirmed as spec to keep regardless of LLM.",
   "full_report": "evals-archive/docs/20-week-cycle-2026-09-07/reports/2026-09-08-r2-llm-compare.md",
-  "full_evidence": "evals-archive/evidence/2026-09-08-week01-llm-compare.json"
+  "full_evidence": "evals-archive/evidence/2026-09-08-week01-llm-compare.json",
+  "result_blind2_20": {
+    "spark_case": "17/20",
+    "spark_field": "136/140",
+    "opus_case": "17/20",
+    "opus_field": "135/140",
+    "note": "seed 20260908, engine-scored after both answers; spark sporadic read errors, opus isolation failures (3rd recurrence)"
+  },
+  "full_report_r3": "evals-archive/docs/20-week-cycle-2026-09-07/reports/2026-09-08-r3-blind2.md"
 }
