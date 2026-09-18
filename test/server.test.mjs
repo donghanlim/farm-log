@@ -1,7 +1,8 @@
+import {tmpdir} from 'node:os';
 import {spawn} from 'node:child_process';
 import test from 'node:test';import assert from 'node:assert/strict';import http from 'node:http';import {mkdtemp,readFile,writeFile,mkdir,symlink,readdir,rename} from 'node:fs/promises';import path from 'node:path';
 import {createServer} from '../src/server.mjs';
-const tmp=process.env.FARMLOG_TEST_DIR||'/Users/justimmacbook/.aside/u/0/sessions/2026-09-07_y3Pe3rFpqhAaVTc7/tmp';
+const tmp=process.env.FARMLOG_TEST_DIR||tmpdir();
 const fields={worked_at:'2026-09-07',parcel_id:'p1',crop:'상추',work_type:'관수',amount:20,unit:'L'};
 const input=(id='k1',extra={})=>({fixtureId:'normal',fields,reviewed:true,idempotencyKey:id,...extra});
 async function setup(t){await mkdir(tmp,{recursive:true});const dir=await mkdtemp(path.join(tmp,'farm-log-test-'));const publicDir=path.join(dir,'public');await mkdir(publicDir);await writeFile(path.join(publicDir,'index.html'),'<h1>Synthetic</h1>');let s=await createServer({dataDir:dir,publicDir,evalPath:path.join(dir,'absent-evals.json')});await new Promise(r=>s.listen(0,r));t.after(()=>new Promise(r=>s.close(r)));return {s,dir,publicDir};}
