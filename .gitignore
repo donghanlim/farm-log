@@ -17,3 +17,8 @@ run.log
 # Local prototype runtime and media (never commit user data)
 .local-data/
 .venv-media/
+
+# internal strategy docs (kept in my_brain)
+docs/FUNDING-ROADMAP.md
+docs/GLOBAL-BUSINESS-BLUEPRINT.md
+docs/global-business-blueprint.svg
