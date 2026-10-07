@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "팜로그 공개 체험판",
+  "short_name": "팜로그",
+  "description": "밭과 작업을 골라 쉽게 영농일지를 남기는 공개 체험판",
+  "lang": "ko-KR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f7f8f4",
+  "theme_color": "#345c46",
+  "categories": ["productivity", "business"],
+  "icons": [
+    {"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}

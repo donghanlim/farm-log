@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko" data-runtime="public-demo">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f7f8f4">
+  <meta name="description" content="밭과 작업을 골라 쉽게 영농일지를 남기는 팜로그 공개 체험판">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="팜로그">
+  <title>팜로그 공개 체험판</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./icon.svg">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#screen">본문으로 바로가기</a>
+  <div id="app"><main class="loading-state"><p>내 체험 농장을 준비하고 있어요.</p></main></div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <noscript>팜로그 체험판은 JavaScript가 필요해요.</noscript>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
